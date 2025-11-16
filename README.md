@@ -1,12 +1,16 @@
+<div align="center">
+
 # Minimal CSS Utility
 
-<p align="center">
+A lightweight CSS utility library to ease development.
+
+<p>
   <a href="https://github.com/aghontpi/minimal-css-utility/releases"><img src="https://img.shields.io/github/v/release/aghontpi/minimal-css-utility?include_prereleases&style=flat-square&label=github-release" alt="release"></a>
   <a href="https://www.npmjs.com/package/minimal-css-utility"><img src="https://img.shields.io/npm/v/minimal-css-utility?style=flat-square" alt="npm"></a>
   <a href="https://github.com/aghontpi/minimal-css-utility/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aghontpi/minimal-css-utility?style=flat-square" alt="license"></a>
 </p>
 
-A lightweight CSS utility library to ease development.
+</div>
 
 
 ## Documentation

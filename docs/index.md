@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "Minimal CSS Utility"
-  text: "A Lightweight, minimal CSS utility library."
+  name: "Minimal CSS"
+  text: "A Lightweight, minimal CSS utility"
   tagline: "Minimal boilerplate, quick and easy to setup."
   actions:
     - theme: brand

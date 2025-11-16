@@ -1,6 +1,6 @@
 {
   "name": "minimal-css-utility",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A SCSS utility library.",
   "main": "dist/min.css",
   "style": "dist/min.css",
