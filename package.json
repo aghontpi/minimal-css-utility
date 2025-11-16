@@ -18,8 +18,8 @@
     "utility",
     "css"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "aghontpi",
+  "license": "MIT",
   "packageManager": "pnpm@10.20.0",
   "devDependencies": {
     "postcss": "^8.5.6",

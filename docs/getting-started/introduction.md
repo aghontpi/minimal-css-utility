@@ -21,7 +21,7 @@ To use this utility in your project, you can either link to the compiled CSS fil
 ### Linking the CSS
 
 ```html
-<link rel="stylesheet" href="minimal-css-utility/dist/min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css">
 ```
 
 ### Importing the SCSS
