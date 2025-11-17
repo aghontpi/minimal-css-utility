@@ -1,0 +1,130 @@
+@use "sass:math";
+@use "variables" as v;
+
+@mixin generate-classes($infix) {
+
+  // --- Display ---
+  @each $value in v.$displays {
+    .d#{$infix}-#{$value} {
+      display: $value !important;
+    }
+  }
+
+  // --- Flex Alignment ---
+  @each $key, $value in v.$align-items {
+    .align-items#{$infix}-#{$key} {
+      align-items: $value !important;
+    }
+
+    // --- Align Self ---
+    .align-self#{$infix}-#{$key} {
+      align-self: $value !important;
+    }
+  }
+
+  @each $key, $value in v.$justify-content {
+    .justify-content#{$infix}-#{$key} {
+      justify-content: $value !important;
+    }
+  }
+
+  @each $key, $value in v.$flex-direction {
+    .flex#{$infix}-#{$key} {
+      flex-direction: $value !important;
+    }
+  }
+
+  .flex#{$infix}-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  .flex#{$infix}-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  // --- Spacing (Margin & Padding) ---
+  @each $key, $value in v.$spacers {
+
+    // Margin
+    .m#{$infix}-#{$key} {
+      margin: $value !important;
+    }
+
+    .mt#{$infix}-#{$key} {
+      margin-top: $value !important;
+    }
+
+    .mb#{$infix}-#{$key} {
+      margin-bottom: $value !important;
+    }
+
+    .ml#{$infix}-#{$key} {
+      margin-left: $value !important;
+    }
+
+    .mr#{$infix}-#{$key} {
+      margin-right: $value !important;
+    }
+
+    .mx#{$infix}-#{$key} {
+      margin-left: $value !important;
+      margin-right: $value !important;
+    }
+
+    .my#{$infix}-#{$key} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+
+    // Padding
+    .p#{$infix}-#{$key} {
+      padding: $value !important;
+    }
+
+    .pt#{$infix}-#{$key} {
+      padding-top: $value !important;
+    }
+
+    .pb#{$infix}-#{$key} {
+      padding-bottom: $value !important;
+    }
+
+    .pl#{$infix}-#{$key} {
+      padding-left: $value !important;
+    }
+
+    .pr#{$infix}-#{$key} {
+      padding-right: $value !important;
+    }
+
+    .px#{$infix}-#{$key} {
+      padding-left: $value !important;
+      padding-right: $value !important;
+    }
+
+    .py#{$infix}-#{$key} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+  }
+
+  @each $key, $value in v.$spacers {
+    @if $key !='auto' {
+
+      // .gap-1, .gap-lg-3, etc.
+      .gap#{$infix}-#{$key} {
+        gap: $value !important;
+      }
+
+      // .row-gap-1, .row-gap-lg-3, etc.
+      .row-gap#{$infix}-#{$key} {
+        row-gap: $value !important;
+      }
+
+      // .col-gap-1, .col-gap-lg-3, etc.
+      .col-gap#{$infix}-#{$key} {
+        column-gap: $value !important;
+      }
+    }
+  }
+}

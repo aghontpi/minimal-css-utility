@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+// This loop iterates over your breakpoints (xs, sm, md, lg, xl, xxl)
+@each $name, $breakpoint in v.$grid-breakpoints {
+
+  // Create the infix (e.g., "-sm", "-lg") or an empty string for "xs"
+  $infix: if($breakpoint ==0, "", "-#{$name}");
+
+  // Generate non-responsive classes (e.g., .d-flex, .m-3)
+  @if ($breakpoint ==0) {
+    @include m.generate-classes($infix);
+  }
+
+  // Generate responsive classes inside media queries (e.g., .d-lg-flex, .m-md-3)
+  @else {
+    @media (min-width: $breakpoint) {
+      @include m.generate-classes($infix);
+    }
+  }
+}
+
+// --- Width utilities ---
+@each $name, $breakpoint in v.$grid-breakpoints {
+  $infix: if($breakpoint ==0, "", "-#{$name}");
+
+  @if ($breakpoint ==0) {
+    .w-100 {
+      width: 100% !important;
+    }
+
+    .w-auto {
+      width: auto !important;
+    }
+  }
+
+  @else {
+    @media (min-width: $breakpoint) {
+      .w#{$infix}-100 {
+        width: 100% !important;
+      }
+
+      .w#{$infix}-auto {
+        width: auto !important;
+      }
+    }
+  }
+}

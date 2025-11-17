@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+
+.row {
+  display: flex;
+  flex-wrap: wrap; // Allows columns to wrap to the next line
+
+  // The "negative margin" trick:
+  // This pulls the row's edges outward to perfectly align
+  // the content of the first and last columns with the .container.
+  margin-left: calc(var(--grid-gutter-width) / -2);
+  margin-right: calc(var(--grid-gutter-width) / -2);
+}
+
+[class^="col-"] {
+  // This is the gutter padding on the sides of each column
+  padding-left: calc(var(--grid-gutter-width) / 2);
+  padding-right: calc(var(--grid-gutter-width) / 2);
+
+  // Ensures padding doesn't affect the width calculation
+  box-sizing: border-box;
+
+  // Mobile-first: default to 100% width
+  width: 100%;
+}

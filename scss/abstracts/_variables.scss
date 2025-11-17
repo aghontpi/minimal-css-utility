@@ -1,0 +1,119 @@
+// Breakpoints
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1440px;
+$container-max-width: 1200px;
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem; // ~24px, the space BETWEEN columns
+
+// A Sass Map to define all breakpoints we want to generate classes for
+// (xs, sm, md, lg, xl, xxl). 'xs' (0px) is the mobile-first default.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: $breakpoint-xl, 
+  xxl: $breakpoint-xxl 
+);
+
+// Spacing map (for m-1, p-3, mx-auto, etc.)
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  // 4px
+  2: 0.5rem,
+  // 8px
+  3: 1rem,
+  // 16px
+  4: 1.5rem,
+  // 24px
+  5: 3rem,
+  // 48px
+  auto: auto
+);
+
+// Display properties (for d-flex, d-none, etc.)
+$displays: (
+  none,
+  block,
+  flex,
+  inline-flex,
+  grid,
+  inline-block
+);
+
+// Flex alignment properties (for align-items-center, etc.)
+$align-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+// Justify content properties (for justify-content-between, etc.)
+$justify-content: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+// Flex direction properties (for flex-column, etc.)
+$flex-direction: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse
+);
+
+// --- Typography Maps ---
+
+// 1. Font Size "Tokens"
+// Defines all the font sizes available in the system.
+$font-sizes: (
+  xs: 0.75rem,
+  // 12px
+  sm: 0.875rem,
+  // 14px
+  base: 1rem,
+  // 16px
+  lg: 1.125rem,
+  // 18px
+  xl: 1.25rem,
+  // 20px
+  '2xl': 1.5rem,
+  // 24px
+  '3xl': 1.875rem,
+  // 30px
+  '4xl': 2.25rem,
+  // 36px
+  '5xl': 3rem,
+  // 48px
+  '6xl': 4rem // 64px
+);
+
+// 2. Heading Element Styles
+// Maps elements (h1-h6) to the size keys from the $font-sizes map.
+$heading-sizes: (
+  h1: '5xl',
+  h2: '4xl',
+  h3: '3xl',
+  h4: '2xl',
+  h5: 'xl',
+  h6: 'lg'
+);
+
+// 3. Font Weights
+$font-weights: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  black: 900
+);
