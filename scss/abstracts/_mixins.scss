@@ -1,8 +1,7 @@
-@use "sass:math";
-@use "variables" as v;
+@use 'sass:math';
+@use 'variables' as v;
 
 @mixin generate-classes($infix) {
-
   // --- Display ---
   @each $value in v.$displays {
     .d#{$infix}-#{$value} {
@@ -44,7 +43,6 @@
 
   // --- Spacing (Margin & Padding) ---
   @each $key, $value in v.$spacers {
-
     // Margin
     .m#{$infix}-#{$key} {
       margin: $value !important;
@@ -109,8 +107,7 @@
   }
 
   @each $key, $value in v.$spacers {
-    @if $key !='auto' {
-
+    @if $key != 'auto' {
       // .gap-1, .gap-lg-3, etc.
       .gap#{$infix}-#{$key} {
         gap: $value !important;

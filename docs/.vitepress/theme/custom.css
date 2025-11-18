@@ -5,10 +5,12 @@
   --vp-font-family-mono: 'Inter', sans-serif !important;
 }
 
-html, body {
-    font-family: 'Inter', sans-serif !important;
+html,
+body {
+  font-family: 'Inter', sans-serif !important;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   line-height: 1.5;
 }

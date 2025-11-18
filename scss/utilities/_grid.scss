@@ -1,9 +1,8 @@
-@use "sass:math";
-@use "../abstracts/variables" as v;
+@use 'sass:math';
+@use '../abstracts/variables' as v;
 
 // --- SCSS Loops to Generate All Classes ---
 @each $name, $breakpoint in v.$grid-breakpoints {
-
   // The smallest breakpoint (xs: 0) classes don't need a media query
   // This loop generates .col-1, .col-2, ... .col-12
   @if ($breakpoint ==0) {
@@ -25,7 +24,6 @@
   // All other breakpoints (sm, md, lg, xl, xxl) are wrapped in media queries
   @else {
     @media (min-width: $breakpoint) {
-
       // Generates .col-sm-1, .col-lg-8, etc.
       @for $i from 1 through v.$grid-columns {
         .col-#{$name}-#{$i} {

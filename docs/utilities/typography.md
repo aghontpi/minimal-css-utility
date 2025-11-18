@@ -55,4 +55,52 @@ You can change the font weight of text using the `.fw-{weight}` classes.
   ## A Note on Responsiveness
   
   Unlike other utility systems, the typography classes (`.text-*` and `.fw-*`) are **not** responsive. They will apply at all screen sizes.
-  
+
+## Text Alignment
+
+Control the horizontal alignment of text.
+
+- `.text-start`
+- `.text-end`
+- `.text-left`
+- `.text-right`
+- `.text-center`
+- `.text-justify`
+
+### Example
+
+<div class="text-center" style="background-color: #f8f9fa; padding: 1rem;">
+  This text is centered.
+</div>
+
+```html
+<div class="text-center">...</div>
+```
+
+## Text Wrapping
+
+Control how text wraps within an element.
+
+- `.text-wrap` - Allows text to wrap normally (default behavior).
+- `.text-nowrap` - Prevents text from wrapping.
+
+### Example
+
+The example below compares default wrapping with `.text-nowrap`. Both boxes are 150px wide inside a container that forces them to wrap to a new line.
+
+<style>
+.wrapping-example-container { display: flex; flex-wrap: wrap; gap: 1rem; width: 250px; border: 1px dashed #999; padding: 0.5rem; }
+.wrapping-example-box { width: 150px; background-color: #f8f9fa; padding: 1rem; border: 1px solid #e9ecef; }
+</style>
+<div class="wrapping-example-container">
+<div class="wrapping-example-box text-wrap"><strong>Default Wrap</strong><br>This long line of text will wrap to fit inside the container.</div>
+<div class="wrapping-example-box text-nowrap" style="overflow: hidden; text-overflow: ellipsis;"><strong>.text-nowrap</strong><br>This long line of text will not wrap and will instead be truncated.</div>
+</div>
+
+```html
+<!-- In a container that is too narrow, flex-wrap will move the second item to a new line -->
+<div class="d-flex" style="flex-wrap: wrap;">
+  <div class="text-wrap" style="width: 150px;">...</div>
+  <div class="text-nowrap" style="width: 150px;">...</div>
+</div>
+```

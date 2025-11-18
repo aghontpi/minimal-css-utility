@@ -1,0 +1,32 @@
+// --- Position Utilities ---
+
+// Position classes
+@each $position in $positions {
+  .position-#{$position} {
+    position: #{$position} !important;
+  }
+}
+
+// Position placement classes (top, start, etc.)
+@each $prop,
+  $css-property in (top: top, bottom: bottom, start: left, end: right)
+{
+  @each $val, $percent in $position-values {
+    .#{$prop}-#{$val} {
+      #{$css-property}: #{$percent} !important;
+    }
+  }
+}
+
+// Translate middle classes
+.translate-middle {
+  transform: translate(-50%, -50%);
+}
+
+.translate-middle-x {
+  transform: translateX(-50%);
+}
+
+.translate-middle-y {
+  transform: translateY(-50%);
+}

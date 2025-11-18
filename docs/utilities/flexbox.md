@@ -115,7 +115,7 @@ In this example, we have a product card with an image and some text. On mobile, 
 ```html
 <div class="d-flex flex-column flex-md-row">
   <div>
-    <img src="..." alt="...">
+    <img src="..." alt="..." />
   </div>
   <div>
     <h4>Product Title</h4>

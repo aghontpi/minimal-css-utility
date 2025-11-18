@@ -12,15 +12,13 @@ A lightweight CSS utility library to ease development.
 
 </div>
 
-
 ## Documentation
+
 You can view the documentation at [minimal-css-utility](https://bluepie.in/minimal-css-utility/). The full documentation for the utility classes can also be found in the `docs/` directory of this repository.
 
-
-## Motivation 
+## Motivation
 
 I wanted a minimal CSS utility that provides just basic features to get started quickly without the bloat of larger frameworks.
-
 
 For my projects, I use reset.css and a set of utility classes without external libraries, I move them from project to project. This eliminates it and makes it easier to maintain and view the docs.
 
@@ -29,8 +27,12 @@ For my projects, I use reset.css and a set of utility classes without external l
 - Reset CSS
 - Grid Layout
 - Utility classes for:
+  - Borders & Shadows
   - Display
   - Flexbox
+  - Interactivity (cursor, opacity)
+  - Overflow
+  - Positioning
   - Sizing
   - Spacing
   - Typography
@@ -57,7 +59,10 @@ pnpm add minimal-css-utility
 You can also use the compiled CSS file from a CDN:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css"
+/>
 ```
 
 Link: https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css
@@ -71,7 +76,7 @@ You can either import the compiled CSS file into your project or import the SCSS
 Import the `min.css` file in your main CSS file:
 
 ```css
-@import "minimal-css-utility/dist/min.css";
+@import 'minimal-css-utility/dist/min.css';
 ```
 
 ### SCSS
@@ -79,7 +84,7 @@ Import the `min.css` file in your main CSS file:
 Import the `style.scss` file in your main SCSS file:
 
 ```scss
-@import "minimal-css-utility/scss/style.scss";
+@import 'minimal-css-utility/scss/style.scss';
 ```
 
 ## Building from source
@@ -109,4 +114,3 @@ This will generate the `dist/min.css` file.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-

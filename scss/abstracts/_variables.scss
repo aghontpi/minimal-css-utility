@@ -14,8 +14,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: $breakpoint-xl, 
-  xxl: $breakpoint-xxl 
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl,
 );
 
 // Spacing map (for m-1, p-3, mx-auto, etc.)
@@ -31,18 +31,11 @@ $spacers: (
   // 24px
   5: 3rem,
   // 48px
-  auto: auto
+  auto: auto,
 );
 
 // Display properties (for d-flex, d-none, etc.)
-$displays: (
-  none,
-  block,
-  flex,
-  inline-flex,
-  grid,
-  inline-block
-);
+$displays: (none, block, flex, inline-flex, grid, inline-block);
 
 // Flex alignment properties (for align-items-center, etc.)
 $align-items: (
@@ -50,7 +43,7 @@ $align-items: (
   end: flex-end,
   center: center,
   baseline: baseline,
-  stretch: stretch
+  stretch: stretch,
 );
 
 // Justify content properties (for justify-content-between, etc.)
@@ -60,7 +53,7 @@ $justify-content: (
   center: center,
   between: space-between,
   around: space-around,
-  evenly: space-evenly
+  evenly: space-evenly,
 );
 
 // Flex direction properties (for flex-column, etc.)
@@ -68,7 +61,7 @@ $flex-direction: (
   row: row,
   row-reverse: row-reverse,
   column: column,
-  column-reverse: column-reverse
+  column-reverse: column-reverse,
 );
 
 // --- Typography Maps ---
@@ -94,7 +87,7 @@ $font-sizes: (
   // 36px
   '5xl': 3rem,
   // 48px
-  '6xl': 4rem // 64px
+  '6xl': 4rem, // 64px
 );
 
 // 2. Heading Element Styles
@@ -105,7 +98,7 @@ $heading-sizes: (
   h3: '3xl',
   h4: '2xl',
   h5: 'xl',
-  h6: 'lg'
+  h6: 'lg',
 );
 
 // 3. Font Weights
@@ -115,5 +108,43 @@ $font-weights: (
   medium: 500,
   semibold: 600,
   bold: 700,
-  black: 900
+  black: 900,
 );
+
+// --- Border and Border Radius ---
+$border-width: 1px;
+$border-color: #dee2e6;
+
+$border-radius: (
+  null: 0.25rem,
+  sm: 0.2rem,
+  lg: 0.3rem,
+  pill: 50rem,
+  circle: 50%,
+);
+
+// --- Shadows ---
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// --- Opacity ---
+$opacities: (
+  0: 0,
+  25: 0.25,
+  50: 0.5,
+  75: 0.75,
+  100: 1,
+);
+
+// --- Positioning ---
+$positions: (static, relative, absolute, fixed, sticky);
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+);
+
+// --- Text Alignment ---
+$text-alignments: (start, end, left, right, center, justify);

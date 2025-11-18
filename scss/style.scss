@@ -1,2 +1,18 @@
+// 1. Abstracts: Variables, functions, and mixins that are used by other Sass files.
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Reset: A modern CSS reset.
 @import 'reset';
-@import 'theme';
+
+// 3. Base: Base styles for the grid system.
+@import 'base/grid-base';
+
+// 4. Utilities: All utility classes.
+@import 'utilities/grid';
+@import 'utilities/typography';
+@import 'utilities/utilities';
+@import 'utilities/borders';
+@import 'utilities/shadows';
+@import 'utilities/positioning';
+@import 'utilities/helpers';

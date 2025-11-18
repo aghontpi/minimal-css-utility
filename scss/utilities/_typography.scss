@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as v;
+@use '../abstracts/variables' as v;
 
 // ---
 // Typography System
@@ -32,4 +32,20 @@
   .fw-#{$name} {
     font-weight: $weight !important;
   }
+}
+
+// 4. Generate .text-[align] utility classes
+@each $alignment in v.$text-alignments {
+  .text-#{$alignment} {
+    text-align: $alignment !important;
+  }
+}
+
+// 5. Generate text wrap utilities
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
 }

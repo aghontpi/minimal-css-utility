@@ -9,7 +9,7 @@ export default {
   plugins: [
     postcss({
       extract: true,
-      use: ["sass"],
+      use: ['sass'],
       sourceMap: false,
       minimize: true,
     }),

@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as v;
+@use '../abstracts/variables' as v;
 
 .row {
   display: flex;
@@ -11,7 +11,7 @@
   margin-right: calc(var(--grid-gutter-width) / -2);
 }
 
-[class^="col-"] {
+[class^='col-'] {
   // This is the gutter padding on the sides of each column
   padding-left: calc(var(--grid-gutter-width) / 2);
   padding-right: calc(var(--grid-gutter-width) / 2);

@@ -11,15 +11,19 @@ For my projects, I use reset.css and a set of utility classes without external l
 ## Installation
 
 ::: code-group
+
 ```bash [npm]
 npm install minimal-css-utility
 ```
+
 ```bash [yarn]
 yarn add minimal-css-utility
 ```
+
 ```bash [pnpm]
 pnpm add minimal-css-utility
 ```
+
 :::
 
 To use this utility in your project, you can either link to the compiled CSS file from the `dist` directory or import the SCSS files into your own stylesheet.
@@ -27,10 +31,13 @@ To use this utility in your project, you can either link to the compiled CSS fil
 ### Linking with CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/minimal-css-utility/dist/min.css"
+/>
 ```
 
-### Importing in your CSS or SCSS 
+### Importing in your CSS or SCSS
 
 ```css
 @import 'minimal-css-utility/dist/min.css';

@@ -1,0 +1,36 @@
+// --- Overflow ---
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+// --- Cursor ---
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.cursor-grab {
+  cursor: grab !important;
+}
+
+// --- Opacity ---
+@each $key, $value in $opacities {
+  .opacity-#{$key} {
+    opacity: $value !important;
+  }
+}

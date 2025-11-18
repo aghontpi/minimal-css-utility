@@ -1,0 +1,10 @@
+# Build output
+dist/
+node_modules/
+
+# VitePress cache and build output
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Lockfile
+pnpm-lock.yaml

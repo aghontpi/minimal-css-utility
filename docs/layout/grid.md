@@ -6,21 +6,20 @@ This grid system provides a powerful and flexible way to create responsive layou
 
 The grid is composed of three fundamental building blocks: containers, rows, and columns.
 
-
-
 - **`.row`**: Rows are horizontal groups of columns. They use `display: flex` and a negative margin trick to ensure the columns inside align correctly without unwanted extra space on the sides. **Direct children of a `.row` must only be columns (`.col-*` classes).**
 
 - **`.col-*`**: These are the columns where your content lives. Columns create the vertical divisions in your layout. You can specify how many of the 12 available columns a single `col` should span. For example, `.col-6` spans 6 out of 12 columns, meaning it takes up 50% of the width.
 
 ## Breakpoints
 
-The grid is designed to be responsive, meaning styles you apply are for the current breakpoint and *up*. The following breakpoints are used:
+The grid is designed to be responsive, meaning styles you apply are for the current breakpoint and _up_. The following breakpoints are used:
 
--   **`xs`** (extra-small): 0px (default, no media query needed)
--   **`sm`** (small): 576px
--   **`md`** (medium): 768px
--   **`lg`** (large): 992px
--   **`xl`** (extra-large): 1200px
+- **`xs`** (extra-small): 0px (default, no media query needed)
+- **`sm`** (small): 576px
+- **`md`** (medium): 768px
+- **`lg`** (large): 992px
+- **`xl`** (extra-large): 1200px
+- **`xxl`** (extra-extra-large): 1440px
 
 You can use these breakpoints as suffixes to column classes (e.g., `.col-md-6`) to define different layouts at different screen sizes.
 
@@ -34,19 +33,19 @@ Here is a simple two-column layout. Each column spans 6 of the 12 available colu
 </div>
 
 ```html
-  <div class="row">
-    <div class="col-6">
-      <!-- Your content here -->
-    </div>
-    <div class="col-6">
-      <!-- Your content here -->
-    </div>
+<div class="row">
+  <div class="col-6">
+    <!-- Your content here -->
   </div>
+  <div class="col-6">
+    <!-- Your content here -->
+  </div>
+</div>
 ```
 
 ## Responsive Layouts
 
-The grid is responsive. The classes you use define the layout for that screen size *and up*. For example, if you want a single column on mobile and a three-column layout on medium screens (`md`) and up, you would do the following:
+The grid is responsive. The classes you use define the layout for that screen size _and up_. For example, if you want a single column on mobile and a three-column layout on medium screens (`md`) and up, you would do the following:
 
 - **`.col-12`**: On extra-small screens (the default), each column takes up the full width.
 - **`.col-md-4`**: On medium screens (≥768px) and larger, each column takes up 4 of the 12 columns (12 / 4 = 3 columns per row).
@@ -58,17 +57,17 @@ The grid is responsive. The classes you use define the layout for that screen si
 </div>
 
 ```html
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
-    </div>
-    <div class="col-12 col-md-4">
-      <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
-    </div>
-    <div class="col-12 col-md-4">
-      <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
-    </div>
+<div class="row">
+  <div class="col-12 col-md-4">
+    <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
   </div>
+  <div class="col-12 col-md-4">
+    <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
+  </div>
+  <div class="col-12 col-md-4">
+    <!-- Spans 100% on mobile, 33.3% on medium screens and up -->
+  </div>
+</div>
 ```
 
 ## More Examples
@@ -83,14 +82,14 @@ You can mix and match column sizes in a single row.
 </div>
 
 ```html
-  <div class="row">
-    <div class="col-4">
-      <!-- Spans 4 of 12 columns -->
-    </div>
-    <div class="col-8">
-      <!-- Spans 8 of 12 columns -->
-    </div>
+<div class="row">
+  <div class="col-4">
+    <!-- Spans 4 of 12 columns -->
   </div>
+  <div class="col-8">
+    <!-- Spans 8 of 12 columns -->
+  </div>
+</div>
 ```
 
 ### Nesting
@@ -111,22 +110,22 @@ You can nest a `.row` inside a `.col-*` to create more complex layouts. The nest
 </div>
 
 ```html
-  <div class="row">
-    <div class="col-8">
-      <!-- Parent column -->
-      <div class="row">
-        <div class="col-6">
-          <!-- Nested column -->
-        </div>
-        <div class="col-6">
-          <!-- Nested column -->
-        </div>
+<div class="row">
+  <div class="col-8">
+    <!-- Parent column -->
+    <div class="row">
+      <div class="col-6">
+        <!-- Nested column -->
+      </div>
+      <div class="col-6">
+        <!-- Nested column -->
       </div>
     </div>
-    <div class="col-4">
-      <!-- Sibling column -->
-    </div>
   </div>
+  <div class="col-4">
+    <!-- Sibling column -->
+  </div>
+</div>
 ```
 
 ## How to Use
@@ -135,52 +134,30 @@ You can nest a `.row` inside a `.col-*` to create more complex layouts. The nest
 2.  **Add columns**: Place `.col-*` classes inside the `.row`.
 3.  **Add content**: Place your content inside the `.col-*` elements.
 
-## What Not to Do
+## Advanced Responsive Layout
 
-Following these rules will help you avoid common layout issues.
+You can combine multiple breakpoint classes to create highly customized responsive layouts. Here's an example that changes column sizes at `md`, `lg`, and `xxl` breakpoints.
 
-### 1. Do Not Place Content Directly in a `.row`
-
-A `.row` is only for holding columns. Placing text or other elements directly inside a row will cause them to ignore the column structure and break the layout.
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3"><div style="background-color: #f2f2f2; padding: 1rem; text-align: center;">.col-12 .col-md-6 .col-lg-4 .col-xxl-3</div></div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3"><div style="background-color: #e3e3e3; padding: 1rem; text-align: center;">.col-12 .col-md-6 .col-lg-4 .col-xxl-3</div></div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3"><div style="background-color: #f2f2f2; padding: 1rem; text-align: center;">.col-12 .col-md-6 .col-lg-4 .col-xxl-3</div></div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3"><div style="background-color: #e3e3e3; padding: 1rem; text-align: center;">.col-12 .col-md-6 .col-lg-4 .col-xxl-3</div></div>
+</div>
 
 ```html
-<!-- ❌ INCORRECT -->
 <div class="row">
-  This text is not in a column!
-  <div class="col-6">...</div>
-</div>
-
-<!-- ✅ CORRECT -->
-<div class="row">
-  <div class="col-12">
-    This text is properly placed in a column.
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+    <!-- Full width on mobile, 2 columns on medium, 3 columns on large, 4 columns on extra-extra-large -->
   </div>
-  <div class="col-6">...</div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+    <!-- Full width on mobile, 2 columns on medium, 3 columns on large, 4 columns on extra-extra-large -->
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+    <!-- Full width on mobile, 2 columns on medium, 3 columns on large, 4 columns on extra-extra-large -->
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+    <!-- Full width on mobile, 2 columns on medium, 3 columns on large, 4 columns on extra-extra-large -->
+  </div>
 </div>
 ```
-
-### 2. Do Not Add Custom Padding or Margins to Columns
-
-The `.col-*` classes have specific `padding` to create the "gutter" (the space between columns). Adding your own `margin` or `padding` directly to a column can break the grid alignment. If you need custom spacing, add a wrapper `<div>` inside the column.
-
-```html
-<!-- ❌ INCORRECT -->
-<div class="row">
-  <div class="col-6" style="margin-left: 20px;">
-    This will misalign the grid.
-  </div>
-  <div class="col-6">...</div>
-</div>
-
-<!-- ✅ CORRECT -->
-<div class="row">
-  <div class="col-6">
-    <div style="margin-left: 20px;">
-      The spacing is applied inside the column, preserving the grid.
-    </div>
-  </div>
-  <div class="col-6">...</div>
-</div>
-```
-
-
