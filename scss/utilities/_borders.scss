@@ -1,25 +1,26 @@
 @use 'sass:map';
+@use '../abstracts/variables' as v;
 
-// --- Border Utilities ---
+// --- Border Utility Classes ---
 
 .border {
-  border: $border-width solid $border-color;
+  border: v.$border-width solid v.$border-color;
 }
 
 .border-top {
-  border-top: $border-width solid $border-color;
+  border-top: v.$border-width solid v.$border-color;
 }
 
 .border-end {
-  border-right: $border-width solid $border-color;
+  border-right: v.$border-width solid v.$border-color;
 }
 
 .border-bottom {
-  border-bottom: $border-width solid $border-color;
+  border-bottom: v.$border-width solid v.$border-color;
 }
 
 .border-start {
-  border-left: $border-width solid $border-color;
+  border-left: v.$border-width solid v.$border-color;
 }
 
 .border-0 {
@@ -42,9 +43,9 @@
   border-left: 0;
 }
 
-// --- Border Radius Utilities ---
+// --- Border Radius Utility Classes ---
 
-@each $name, $radius in $border-radius {
+@each $name, $radius in v.$border-radius {
   $class-name: if($name, '-#{$name}', '');
   .rounded#{$class-name} {
     border-radius: $radius;
@@ -52,21 +53,21 @@
 }
 
 .rounded-top {
-  border-top-left-radius: map.get($border-radius, null);
-  border-top-right-radius: map.get($border-radius, null);
+  border-top-left-radius: map.get(v.$border-radius, null);
+  border-top-right-radius: map.get(v.$border-radius, null);
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: map.get($border-radius, null);
-  border-bottom-left-radius: map.get($border-radius, null);
+  border-bottom-right-radius: map.get(v.$border-radius, null);
+  border-bottom-left-radius: map.get(v.$border-radius, null);
 }
 
 .rounded-start {
-  border-bottom-left-radius: map.get($border-radius, null);
-  border-top-left-radius: map.get($border-radius, null);
+  border-bottom-left-radius: map.get(v.$border-radius, null);
+  border-top-left-radius: map.get(v.$border-radius, null);
 }
 
 .rounded-end {
-  border-top-right-radius: map.get($border-radius, null);
-  border-bottom-right-radius: map.get($border-radius, null);
+  border-top-right-radius: map.get(v.$border-radius, null);
+  border-bottom-right-radius: map.get(v.$border-radius, null);
 }

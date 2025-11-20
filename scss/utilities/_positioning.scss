@@ -1,24 +1,26 @@
-// --- Position Utilities ---
+@use '../abstracts/variables' as v;
 
-// Position classes
-@each $position in $positions {
+// --- Positioning Utilities ---
+
+// Generate position utilities (static, relative, etc.)
+@each $position in v.$positions {
   .position-#{$position} {
     position: #{$position} !important;
   }
 }
 
-// Position placement classes (top, start, etc.)
+// Generate placement utilities (top, start, etc.)
 @each $prop,
   $css-property in (top: top, bottom: bottom, start: left, end: right)
 {
-  @each $val, $percent in $position-values {
+  @each $val, $percent in v.$position-values {
     .#{$prop}-#{$val} {
       #{$css-property}: #{$percent} !important;
     }
   }
 }
 
-// Translate middle classes
+// Centering utilities using transform
 .translate-middle {
   transform: translate(-50%, -50%);
 }

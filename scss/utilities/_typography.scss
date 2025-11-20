@@ -1,47 +1,45 @@
 @use '../abstracts/variables' as v;
 
-// ---
-// Typography System
-// ---
+// --- Typography Utilities ---
 
-// 1. Generate default styles for h1-h6
+// 1. Apply default styles to heading elements (h1-h6)
 @each $element, $size-key in v.$heading-sizes {
   #{$element} {
-    // Get the font-size value (e.g., 3rem) from the $font-sizes map
+    // Retrieve font size from map
     font-size: map-get(v.$font-sizes, $size-key);
 
-    // Set default heading styles
+    // Apply default font weight and line height
     font-weight: map-get(v.$font-weights, 'bold');
     line-height: 1.2;
 
-    // Use your existing $spacers map for consistent margins
+    // Apply bottom margin using spacer map
     margin-top: 0;
     margin-bottom: map-get(v.$spacers, 2); // 0.5rem
   }
 }
 
-// 2. Generate .text-[size] utility classes
+// 2. Generate font-size utility classes (.text-[size])
 @each $name, $size in v.$font-sizes {
   .text-#{$name} {
     font-size: $size !important;
   }
 }
 
-// 3. Generate .fw-[weight] utility classes
+// 3. Generate font-weight utility classes (.fw-[weight])
 @each $name, $weight in v.$font-weights {
   .fw-#{$name} {
     font-weight: $weight !important;
   }
 }
 
-// 4. Generate .text-[align] utility classes
+// 4. Generate text-alignment utility classes (.text-[align])
 @each $alignment in v.$text-alignments {
   .text-#{$alignment} {
     text-align: $alignment !important;
   }
 }
 
-// 5. Generate text wrap utilities
+// 5. Text wrapping utilities
 .text-wrap {
   white-space: normal !important;
 }

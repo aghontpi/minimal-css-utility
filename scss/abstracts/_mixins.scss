@@ -2,20 +2,20 @@
 @use 'variables' as v;
 
 @mixin generate-classes($infix) {
-  // --- Display ---
+  // --- Display Utilities ---
   @each $value in v.$displays {
     .d#{$infix}-#{$value} {
       display: $value !important;
     }
   }
 
-  // --- Flex Alignment ---
+  // --- Flex Alignment Utilities ---
   @each $key, $value in v.$align-items {
     .align-items#{$infix}-#{$key} {
       align-items: $value !important;
     }
 
-    // --- Align Self ---
+    // --- Align Self Utilities ---
     .align-self#{$infix}-#{$key} {
       align-self: $value !important;
     }
@@ -41,7 +41,7 @@
     flex-shrink: 1 !important;
   }
 
-  // --- Spacing (Margin & Padding) ---
+  // --- Spacing Utilities (Margin & Padding) ---
   @each $key, $value in v.$spacers {
     // Margin
     .m#{$infix}-#{$key} {
@@ -108,17 +108,15 @@
 
   @each $key, $value in v.$spacers {
     @if $key != 'auto' {
-      // .gap-1, .gap-lg-3, etc.
+      // Gap Utilities
       .gap#{$infix}-#{$key} {
         gap: $value !important;
       }
 
-      // .row-gap-1, .row-gap-lg-3, etc.
       .row-gap#{$infix}-#{$key} {
         row-gap: $value !important;
       }
 
-      // .col-gap-1, .col-gap-lg-3, etc.
       .col-gap#{$infix}-#{$key} {
         column-gap: $value !important;
       }

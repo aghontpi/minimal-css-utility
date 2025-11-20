@@ -1,9 +1,9 @@
 @use 'sass:math';
 @use '../abstracts/variables' as v;
 
-// --- SCSS Loops to Generate All Classes ---
+// --- Grid Class Generation ---
 @each $name, $breakpoint in v.$grid-breakpoints {
-  // The smallest breakpoint (xs: 0) classes don't need a media query
+  // Generate default column classes (xs) without media queries.
   // This loop generates .col-1, .col-2, ... .col-12
   @if ($breakpoint ==0) {
     @for $i from 1 through v.$grid-columns {
@@ -13,7 +13,7 @@
       }
     }
 
-    // Generates .col (for auto-sizing columns)
+    // Generate auto-sizing column class (.col)
     .col {
       flex-basis: 0;
       flex-grow: 1;
@@ -21,10 +21,10 @@
     }
   }
 
-  // All other breakpoints (sm, md, lg, xl, xxl) are wrapped in media queries
+  // Generate responsive column classes for larger breakpoints (sm, md, etc.)
   @else {
     @media (min-width: $breakpoint) {
-      // Generates .col-sm-1, .col-lg-8, etc.
+      // Generate numbered column classes (e.g., .col-sm-1)
       @for $i from 1 through v.$grid-columns {
         .col-#{$name}-#{$i} {
           flex-basis: math.div(100%, v.$grid-columns) * $i;
@@ -32,7 +32,7 @@
         }
       }
 
-      // Generates .col-sm, .col-md, etc.
+      // Generate auto-sizing responsive column classes (e.g., .col-sm)
       .col-#{$name} {
         flex-basis: 0;
         flex-grow: 1;
