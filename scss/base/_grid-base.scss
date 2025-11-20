@@ -2,23 +2,21 @@
 
 .row {
   display: flex;
-  flex-wrap: wrap; // Allows columns to wrap to the next line
+  flex-wrap: wrap; // Enable flex wrapping for multi-line columns.
 
-  // The "negative margin" trick:
-  // This pulls the row's edges outward to perfectly align
-  // the content of the first and last columns with the .container.
+  // Apply negative margins to align row content with the container edges.
   margin-left: calc(var(--grid-gutter-width) / -2);
   margin-right: calc(var(--grid-gutter-width) / -2);
 }
 
 [class^='col-'] {
-  // This is the gutter padding on the sides of each column
+  // Apply gutter padding to columns.
   padding-left: calc(var(--grid-gutter-width) / 2);
   padding-right: calc(var(--grid-gutter-width) / 2);
 
-  // Ensures padding doesn't affect the width calculation
+  // Use border-box sizing for consistent width calculations.
   box-sizing: border-box;
 
-  // Mobile-first: default to 100% width
+  // Default to full width for mobile-first responsiveness.
   width: 100%;
 }

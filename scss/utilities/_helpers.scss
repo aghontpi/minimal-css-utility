@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as v;
 
-// --- Overflow ---
+// --- Overflow Utilities ---
 .overflow-auto {
   overflow: auto !important;
 }
@@ -17,7 +17,7 @@
   overflow: scroll !important;
 }
 
-// --- Cursor ---
+// --- Cursor Utilities ---
 .cursor-pointer {
   cursor: pointer !important;
 }
@@ -30,7 +30,7 @@
   cursor: grab !important;
 }
 
-// --- Opacity ---
+// --- Opacity Utilities ---
 @each $key, $value in v.$opacities {
   .opacity-#{$key} {
     opacity: $value !important;

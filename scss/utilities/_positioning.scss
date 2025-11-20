@@ -1,15 +1,15 @@
 @use '../abstracts/variables' as v;
 
-// --- Position Utilities ---
+// --- Positioning Utilities ---
 
-// Position classes
+// Generate position utilities (static, relative, etc.)
 @each $position in v.$positions {
   .position-#{$position} {
     position: #{$position} !important;
   }
 }
 
-// Position placement classes (top, start, etc.)
+// Generate placement utilities (top, start, etc.)
 @each $prop,
   $css-property in (top: top, bottom: bottom, start: left, end: right)
 {
@@ -20,7 +20,7 @@
   }
 }
 
-// Translate middle classes
+// Centering utilities using transform
 .translate-middle {
   transform: translate(-50%, -50%);
 }

@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use '../abstracts/variables' as v;
 
-// --- Border Utilities ---
+// --- Border Utility Classes ---
 
 .border {
   border: v.$border-width solid v.$border-color;
@@ -43,7 +43,7 @@
   border-left: 0;
 }
 
-// --- Border Radius Utilities ---
+// --- Border Radius Utility Classes ---
 
 @each $name, $radius in v.$border-radius {
   $class-name: if($name, '-#{$name}', '');

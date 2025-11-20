@@ -1,5 +1,7 @@
 @use '../abstracts/variables' as v;
 
+// --- Box Shadow Utilities ---
+
 .shadow-sm {
   box-shadow: v.$box-shadow-sm;
 }

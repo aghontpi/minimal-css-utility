@@ -1,16 +1,16 @@
-// 1. Abstracts: Variables, functions, and mixins that are used by other Sass files.
+// --- Import Abstracts ---
 @use 'sass:meta';
 @use 'abstracts/variables' as v;
 
-// Define a mixin to load all styles
+// Mixin to load all framework styles
 @mixin load-styles {
-  // 2. Reset: A modern CSS reset.
+  // --- Reset ---
   @include meta.load-css('reset');
 
-  // 3. Base: Base styles for the grid system.
+  // --- Base Styles ---
   @include meta.load-css('base/grid-base');
 
-  // 4. Utilities: All utility classes.
+  // --- Utility Classes ---
   @include meta.load-css('utilities/grid');
   @include meta.load-css('utilities/typography');
   @include meta.load-css('utilities/utilities');
@@ -20,7 +20,8 @@
   @include meta.load-css('utilities/helpers');
 }
 
-// Apply scoping if configured
+// --- Scoping Configuration ---
+// Apply CSS scoping if a scope selector is defined.
 @if v.$css-scope {
   #{v.$css-scope} {
     @include load-styles;

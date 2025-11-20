@@ -1,19 +1,20 @@
-// Breakpoints
+// --- Breakpoints ---
+// Define the breakpoints for responsive design.
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1440px;
 $container-max-width: 1200px;
 
-// Scoping
-// Set this to a selector (e.g. '.my-app') to scope all styles under that selector.
+// --- CSS Scoping Configuration ---
+// Set this to a selector (e.g., '.my-app') to scope all styles under that selector.
 // Leave as null for global styles.
 $css-scope: null !default;
 
-// Grid
+// --- Grid System Configuration ---
 $grid-columns: 12;
-$grid-gutter-width: 1.5rem; // ~24px, the space BETWEEN columns
+$grid-gutter-width: 1.5rem; // Space between columns (~24px)
 
-// A Sass Map to define all breakpoints we want to generate classes for
-// (xs, sm, md, lg, xl, xxl). 'xs' (0px) is the mobile-first default.
+// Map of breakpoints used to generate responsive utility classes.
+// 'xs' (0px) is the default mobile-first breakpoint.
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -23,26 +24,25 @@ $grid-breakpoints: (
   xxl: $breakpoint-xxl,
 );
 
-// Spacing map (for m-1, p-3, mx-auto, etc.)
+// --- Spacing Configuration ---
+// Map of spacing values used for margin and padding utilities.
 $spacers: (
   0: 0,
-  1: 0.25rem,
-  // 4px
-  2: 0.5rem,
-  // 8px
-  3: 1rem,
-  // 16px
-  4: 1.5rem,
-  // 24px
-  5: 3rem,
-  // 48px
+  1: 0.25rem, // 4px
+  2: 0.5rem,  // 8px
+  3: 1rem,    // 16px
+  4: 1.5rem,  // 24px
+  5: 3rem,    // 48px
   auto: auto,
 );
 
-// Display properties (for d-flex, d-none, etc.)
+// --- Display Configuration ---
+// List of display property values.
 $displays: (none, block, flex, inline-flex, grid, inline-block);
 
-// Flex alignment properties (for align-items-center, etc.)
+// --- Flexbox Configuration ---
+
+// Map of flexbox alignment values (align-items).
 $align-items: (
   start: flex-start,
   end: flex-end,
@@ -51,7 +51,7 @@ $align-items: (
   stretch: stretch,
 );
 
-// Justify content properties (for justify-content-between, etc.)
+// Map of flexbox justification values (justify-content).
 $justify-content: (
   start: flex-start,
   end: flex-end,
@@ -61,7 +61,7 @@ $justify-content: (
   evenly: space-evenly,
 );
 
-// Flex direction properties (for flex-column, etc.)
+// Map of flexbox direction values.
 $flex-direction: (
   row: row,
   row-reverse: row-reverse,
@@ -69,34 +69,23 @@ $flex-direction: (
   column-reverse: column-reverse,
 );
 
-// --- Typography Maps ---
+// --- Typography Configuration ---
 
-// 1. Font Size "Tokens"
-// Defines all the font sizes available in the system.
+// Map of available font sizes.
 $font-sizes: (
-  xs: 0.75rem,
-  // 12px
-  sm: 0.875rem,
-  // 14px
-  base: 1rem,
-  // 16px
-  lg: 1.125rem,
-  // 18px
-  xl: 1.25rem,
-  // 20px
-  '2xl': 1.5rem,
-  // 24px
-  '3xl': 1.875rem,
-  // 30px
-  '4xl': 2.25rem,
-  // 36px
-  '5xl': 3rem,
-  // 48px
-  '6xl': 4rem, // 64px
+  xs: 0.75rem,    // 12px
+  sm: 0.875rem,   // 14px
+  base: 1rem,     // 16px
+  lg: 1.125rem,   // 18px
+  xl: 1.25rem,    // 20px
+  '2xl': 1.5rem,  // 24px
+  '3xl': 1.875rem,// 30px
+  '4xl': 2.25rem, // 36px
+  '5xl': 3rem,    // 48px
+  '6xl': 4rem,    // 64px
 );
 
-// 2. Heading Element Styles
-// Maps elements (h1-h6) to the size keys from the $font-sizes map.
+// Map linking heading elements to font sizes.
 $heading-sizes: (
   h1: '5xl',
   h2: '4xl',
@@ -106,7 +95,7 @@ $heading-sizes: (
   h6: 'lg',
 );
 
-// 3. Font Weights
+// Map of font weights.
 $font-weights: (
   light: 300,
   normal: 400,
@@ -116,7 +105,7 @@ $font-weights: (
   black: 900,
 );
 
-// --- Border and Border Radius ---
+// --- Border Configuration ---
 $border-width: 1px;
 $border-color: #dee2e6;
 
@@ -128,12 +117,12 @@ $border-radius: (
   circle: 50%,
 );
 
-// --- Shadows ---
+// --- Box Shadow Configuration ---
 $box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
-// --- Opacity ---
+// --- Opacity Levels ---
 $opacities: (
   0: 0,
   25: 0.25,
@@ -142,7 +131,7 @@ $opacities: (
   100: 1,
 );
 
-// --- Positioning ---
+// --- Positioning Configuration ---
 $positions: (static, relative, absolute, fixed, sticky);
 
 $position-values: (
@@ -151,5 +140,5 @@ $position-values: (
   100: 100%,
 );
 
-// --- Text Alignment ---
+// --- Text Alignment Values ---
 $text-alignments: (start, end, left, right, center, justify);
