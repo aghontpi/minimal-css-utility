@@ -87,6 +87,20 @@ Import the `style.scss` file in your main SCSS file:
 @import 'minimal-css-utility/scss/style.scss';
 ```
 
+### CSS Scoping
+
+You can scope all the generated CSS under a specific parent selector (e.g., `.my-app`) by configuring the `$css-scope` variable. Since this project uses Sass modules, you need to configure the variables module before loading the styles.
+
+```scss
+// Configure the variables module
+@use 'minimal-css-utility/scss/abstracts/variables' with (
+  $css-scope: '.my-app'
+);
+
+// Load the styles
+@use 'minimal-css-utility/scss/style';
+```
+
 ## Building from source
 
 If you want to build the CSS from the source SCSS files, you can do so by following these steps:

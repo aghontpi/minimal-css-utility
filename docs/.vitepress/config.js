@@ -18,6 +18,7 @@ export default {
           { text: 'Introduction', link: '/getting-started/introduction' },
           { text: 'Breakpoints', link: '/getting-started/breakpoints' },
           { text: 'CSS Reset', link: '/getting-started/reset' },
+          { text: 'CSS Scoping', link: '/getting-started/scoping' },
         ],
       },
       {

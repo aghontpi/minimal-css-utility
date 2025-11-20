@@ -3,6 +3,11 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1440px;
 $container-max-width: 1200px;
 
+// Scoping
+// Set this to a selector (e.g. '.my-app') to scope all styles under that selector.
+// Leave as null for global styles.
+$css-scope: null !default;
+
 // Grid
 $grid-columns: 12;
 $grid-gutter-width: 1.5rem; // ~24px, the space BETWEEN columns

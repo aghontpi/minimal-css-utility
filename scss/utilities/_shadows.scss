@@ -1,13 +1,15 @@
+@use '../abstracts/variables' as v;
+
 .shadow-sm {
-  box-shadow: $box-shadow-sm;
+  box-shadow: v.$box-shadow-sm;
 }
 
 .shadow {
-  box-shadow: $box-shadow;
+  box-shadow: v.$box-shadow;
 }
 
 .shadow-lg {
-  box-shadow: $box-shadow-lg;
+  box-shadow: v.$box-shadow-lg;
 }
 
 .shadow-none {

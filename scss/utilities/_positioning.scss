@@ -1,7 +1,9 @@
+@use '../abstracts/variables' as v;
+
 // --- Position Utilities ---
 
 // Position classes
-@each $position in $positions {
+@each $position in v.$positions {
   .position-#{$position} {
     position: #{$position} !important;
   }
@@ -11,7 +13,7 @@
 @each $prop,
   $css-property in (top: top, bottom: bottom, start: left, end: right)
 {
-  @each $val, $percent in $position-values {
+  @each $val, $percent in v.$position-values {
     .#{$prop}-#{$val} {
       #{$css-property}: #{$percent} !important;
     }
